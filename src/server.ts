@@ -18,7 +18,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use(mainRoutes);
 
 server.use((req, res) => {
-    res.status(400).send('Pagina nao encontrada');
+    res.status(400).render('pages/404');
 })
 
 server.listen(process.env.PORT);
